@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>到位首页</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <div class="header-logo">
+        <img src="./img/header/logo.png" alt="">
+      </div>
+      <div class="header-address">
+        <img src="./img/header/citypoint.png" alt="">
+        <p>北京 切换城市</p>
+      </div>
+      <div class="header-nav">
+        <p>首页</p>
+        <p>到位APP</p>
+        <p>服务商</p>
+        <p>商家入驻</p>
+        <p>风物APP</p>
+        <p>关于我们</p>
+        <p class="bus-login">商家登陆</p>
+      </div>
+    </div>
+    <div id="content">
+      <div class="content-top">
+        <ul class="top-list">
+          <li>
+            <a href="">家庭保洁</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">上门按摩</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">上门维修</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">家电清洗</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">衣物洗护</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">搬家速运</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">美容美妆</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">上门医护</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">保姆月嫂</a>
+            <img src="" alt="">
+          </li>
+          <li>
+            <a href="">养车用车</a>
+            <img src="" alt="">
+          </li>
+        </ul>
+        <div class="top-list-hook"></div>
+        <div class="content-swiper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background:url('./img/content/swiper/banner1.jpg') center center no-repeat;"></div>
+              <div class="swiper-slide" style="background:url('./img/content/swiper/banner2.jpg') center center no-repeat;"></div>
+              <div class="swiper-slide" style="background:url('./img/content/swiper/banner3.jpg') center center no-repeat;"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-container"></div>
+    </div>
+    <div id="footer"></div>
+  </div>
+</body>
+<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="./js/swiper.js"></script>
+<script>
+  $(function () {
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      effect: 'fade',
+      loop:true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
+    });
+  })
+</script>
+</html>

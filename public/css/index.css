@@ -1,0 +1,93 @@
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+#wrap #header {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  align-items: center;
+  border-bottom: 1px solid #b7cfea;
+}
+#wrap #header .header-logo {
+  width: 25%;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  margin-left: 15px;
+}
+#wrap #header .header-logo >img {
+  height: 40px;
+  margin-top: 12px;
+}
+#wrap #header .header-address {
+  width: 15%;
+  height: 65px;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+#wrap #header .header-address >p {
+  font-weight: bold;
+}
+#wrap #header .header-nav {
+  height: 80%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+#wrap #header .header-nav >p {
+  text-align: center;
+  flex: 1;
+  color: #121212;
+  font-weight: bold;
+  font-size: 16px;
+}
+#wrap #header .header-nav .bus-login {
+  background-color: #e94840;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 10px;
+}
+#wrap #content {
+  width: 100%;
+}
+#wrap #content .content-top {
+  width: 100%;
+  height: 420px;
+  background-color: #e3f5ff;
+  position: relative;
+}
+#wrap #content .content-top .top-list {
+  height: 100%;
+  width: 180px;
+  background-color: #757881;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  z-index: 2;
+}
+#wrap #content .content-top .top-list >li {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  line-height: 42px;
+}
+#wrap #content .content-top .top-list >li >a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+#wrap #content .content-top .content-swiper {
+  position: absolute;
+  width: 100%;
+  height: 420px;
+}
+#wrap #content .content-top .content-swiper .swiper-container {
+  height: 100%;
+}
