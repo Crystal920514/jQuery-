@@ -10,6 +10,47 @@
   background-color: #fff;
   align-items: center;
   border-bottom: 1px solid #b7cfea;
+  z-index: 800;
+}
+#wrap #header.on {
+  position: fixed;
+  box-shadow: 0 2px 3px #888;
+  top: 0;
+  left: 0;
+  opacity: 0.95;
+  animation: show 1.5s ease;
+}
+@-moz-keyframes show {
+  from {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+  }
+}
+@-webkit-keyframes show {
+  from {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+  }
+}
+@-o-keyframes show {
+  from {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+  }
+}
+@keyframes show {
+  from {
+    transform: translateY(-100%) rotateX(90deg);
+  }
+  to {
+    transform: translateY(0) rotateX(0);
+  }
 }
 #wrap #header .header-logo {
   width: 25%;
@@ -40,12 +81,15 @@
   align-items: center;
   margin-right: 50px;
 }
-#wrap #header .header-nav >p {
+#wrap #header .header-nav >a {
   text-align: center;
   flex: 1;
   color: #121212;
   font-weight: bold;
   font-size: 16px;
+}
+#wrap #header .header-nav >a:hover {
+  color: #f00;
 }
 #wrap #header .header-nav .bus-login {
   background-color: #e94840;
@@ -80,8 +124,30 @@
 }
 #wrap #content .content-top .top-list >li >a {
   color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
   font-weight: bold;
+}
+#wrap #content .content-top .top-list >li .top-list-hook {
+  height: 100%;
+  width: 180px;
+  background-color: rgba(255,255,255,0.8);
+  position: absolute;
+  top: 0;
+  left: 180px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#wrap #content .content-top .top-list >li .top-list-hook.on {
+  display: block;
+}
+#wrap #content .content-top .top-list >li .top-list-hook >a {
+  font-size: 16px;
+  color: #000;
 }
 #wrap #content .content-top .content-swiper {
   position: absolute;
@@ -90,4 +156,327 @@
 }
 #wrap #content .content-top .content-swiper .swiper-container {
   height: 100%;
+}
+#wrap #content .content-container {
+  width: 100%;
+}
+#wrap #content .content-container .content-item {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#wrap #content .content-container .content-item >h2 {
+  font-size: 28px;
+  font-weight: bold;
+  height: 80px;
+  line-height: 80px;
+  padding-top: 20px;
+}
+#wrap #content .content-container .content-item .content-container-title {
+  display: flex;
+  width: 600px;
+  justify-content: space-around;
+}
+#wrap #content .content-container .content-item .content-container-title >a {
+  display: block;
+  font-size: 24px;
+  color: #333;
+}
+#wrap #content .content-container .content-item .more {
+  position: absolute;
+  right: 70px;
+  top: 110px;
+  font-size: 18px;
+  color: #7e8c8d;
+}
+#wrap #content .content-container .content-item .content-container-card {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item {
+  width: 230px;
+  height: 325px;
+  border: 1px solid #c0c4d0;
+  background-color: #fff;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link:hover {
+  box-shadow: 4px 8px 10px #888;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link >img {
+  width: 210px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link >h3 {
+  font-weight: bold;
+  font-size: 16px;
+  height: 28px;
+  line-height: 28px;
+  margin-left: 10px;
+  color: #000;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link >p {
+  margin-left: 10px;
+  font-size: 14px;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link .card-bottom {
+  width: 85%;
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link .card-bottom .card-bottom-left .card-rmb {
+  color: #f00;
+  font-size: 14px;
+  margin-left: -3px;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link .card-bottom .card-bottom-left .card-count {
+  color: #f00;
+  font-weight: bold;
+  font-size: 20px;
+}
+#wrap #content .content-container .content-item .content-container-card .card-item .card-link .card-bottom >p {
+  background-color: #fb474f;
+  color: #fff;
+  height: 22px;
+  line-height: 22px;
+  width: 70px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+}
+#wrap #footer {
+  width: 100%;
+  height: 380px;
+  background-color: #fff;
+}
+#wrap #footer .footer-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#wrap #footer .footer-info .footer-info-top {
+  font-size: 30px;
+  margin-top: 80px;
+}
+#wrap #footer .footer-info .footer-info-top >span {
+  font-weight: bold;
+  color: #333;
+}
+#wrap #footer .footer-info .footer-info-top .footer-info-red {
+  color: #fb474f;
+}
+#wrap #footer .footer-info >p {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #3d3838;
+}
+#wrap #footer .footer-info .footer-info-bottom {
+  margin-top: 20px;
+  width: 27%;
+  display: flex;
+  justify-content: space-between;
+}
+#wrap #footer .footer-info .footer-info-bottom >div {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+}
+#wrap #footer .footer-info .footer-info-bottom >div >span {
+  font-size: 18px;
+}
+#wrap #footer .footer-city {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+}
+#wrap #footer .footer-city .hot-city {
+  width: 10%;
+}
+#wrap #footer .footer-city .hot-city >p {
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 19px;
+  font-weight: bold;
+}
+#wrap #footer .footer-city .city-list {
+  width: 1100px;
+}
+#wrap #footer .footer-city .city-list >a {
+  display: block;
+  width: 100px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  float: right;
+}
+#wrap #footer-bottom {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+#wrap #footer-bottom >p {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+  font-size: 14px;
+  margin-left: 20px;
+}
+#service-content {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fbf8f8;
+}
+#service-content >h2 {
+  margin: 0 74.5px;
+  height: 85px;
+  line-height: 85px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+#service-content .service-container {
+  margin: 0 74.5px;
+  display: flex;
+}
+#service-content .service-container .service-container-left {
+  width: 80%;
+  background-color: #fbf8f8;
+  display: flex;
+  flex-wrap: wrap;
+}
+#service-content .service-container .service-container-left .service-card-item {
+  width: 230px;
+  height: 298px;
+  border: 1px solid #c0c4d0;
+  background-color: #fff;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link:hover {
+  box-shadow: 4px 8px 10px #888;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link >img {
+  width: 210px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link .card-text {
+  display: flex;
+  padding: 0 10px;
+  margin-top: 15px;
+  height: 26px;
+  align-items: center;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link .card-text >img {
+  margin-right: 10px;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link .card-text >h3 {
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link .card-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 15px;
+}
+#service-content .service-container .service-container-left .service-card-item .card-link .card-bottom >span {
+  font-size: 12px;
+}
+#service-content .service-container .service-container-right {
+  width: 20%;
+  position: relative;
+}
+#service-content .service-container .service-container-right >img {
+  display: block;
+  margin-bottom: 10px;
+}
+#service-content .service-container .service-container-right .img-center {
+  position: absolute;
+  top: 326px;
+  right: 26px;
+  width: 200px;
+}
+#service-content .service-more {
+  width: 80%;
+  height: 200px;
+}
+#service-content .service-more >span {
+  display: block;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  width: 200px;
+  margin: 75px auto 75px;
+  color: #7e8c8d;
+  border: 1px solid #d1d1d1;
+  border-radius: 10p;
+}
+#detail-content {
+  width: 100%;
+  background-color: #f8f8f8;
+  padding-top: 10px;
+}
+#detail-content .detail-top {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: space-around;
+}
+#detail-content .detail-top .detail-top-left {
+  width: 45%;
+  display: flex;
+  align-items: flex-end;
+}
+#detail-content .detail-top .detail-top-left >h2 {
+  color: #000;
+  font-weight: bold;
+  font-size: 34px;
+}
+#detail-content .detail-top .detail-top-right {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#detail-content .detail-nav {
+  width: 100%;
+  background-color: #333;
+  height: 40px;
+  display: flex;
+  padding-left: 60px;
+}
+#detail-content .detail-nav >a {
+  display: block;
+  height: 100%;
+  text-align: center;
+  width: 150px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 14px;
 }

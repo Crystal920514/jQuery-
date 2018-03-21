@@ -1,3 +1,4 @@
+//首页
 #wrap
   width 100%
   height 100%
@@ -9,6 +10,19 @@
     background-color white
     align-items center
     border-bottom 1px solid #b7cfea
+    z-index 800
+    &.on
+      position fixed
+      box-shadow 0 2px 3px #888
+      top 0
+      left 0
+      opacity 0.95
+      animation:show 1.5s ease
+      @keyframes show
+        from
+          transform  translateY(-100%) rotateX(90deg)
+        to
+          transform  translateY(0) rotateX(0)
     .header-logo
       width 25%
       height 65px
@@ -33,12 +47,14 @@
       display flex
       align-items center
       margin-right 50px
-      >p
+      >a
         text-align center
         flex 1
         color #121212
         font-weight bold
         font-size 16px
+        &:hover
+          color red
       .bus-login
         background-color #e94840
         color white
@@ -67,11 +83,298 @@
           line-height 42px
           >a
             color white
+            display block
+            width 100%
+            height 100%
             font-size 16px
             font-weight bold
+          .top-list-hook
+            height 100%
+            width 180px
+            background-color rgba(255,255,255,.8)
+            position absolute
+            top 0
+            left 180px
+            z-index 2
+            display flex
+            flex-direction column
+            align-items center
+            &.on
+              display block
+            >a
+              font-size 16px
+              color black
       .content-swiper
         position absolute
         width 100%
         height 420px
         .swiper-container
           height 100%
+    .content-container
+      width 100%
+      .content-item
+        position relative
+        width 100%
+        margin 0 auto
+        height 520px
+        display flex
+        flex-direction column
+        align-items center
+        >h2
+          font-size 28px
+          font-weight bold
+          height 80px
+          line-height 80px
+          padding-top 20px
+        .content-container-title
+          display flex
+          width 600px
+          justify-content space-around
+          >a
+            display block
+            font-size 24px
+            color #333
+        .more
+          position absolute
+          right 70px
+          top 110px
+          font-size 18px
+          color #7e8c8d
+        .content-container-card
+          width 90%
+          display flex
+          justify-content space-between
+          margin-top 30px
+          .card-item
+            width 230px
+            height 325px
+            border 1px solid #c0c4d0
+            background-color white
+            .card-link
+              display block
+              width 100%
+              height 100%
+              &:hover
+                box-shadow 4px 8px 10px #888
+              >img
+                width 210px
+                margin-top 10px
+                margin-left 10px
+              >h3
+                font-weight bold
+                font-size 16px
+                height 28px
+                line-height 28px
+                margin-left 10px
+                color black
+              >p
+                margin-left 10px
+                font-size 14px
+              .card-bottom
+                width 85%
+                margin-left 15px
+                display flex
+                justify-content space-between
+                margin-top 20px
+                .card-bottom-left
+                  .card-rmb
+                    color red
+                    font-size 14px
+                    margin-left -3px
+                  .card-count
+                    color red
+                    font-weight bold
+                    font-size 20px
+                >p
+                  background-color #FB474F
+                  color white
+                  height 22px
+                  line-height 22px
+                  width 70px
+                  text-align center
+                  border-radius 5px
+                  font-size 14px
+  #footer
+    width 100%
+    height 380px
+    background-color white
+    .footer-info
+      width 100%
+      display flex
+      flex-direction column
+      align-items center
+      .footer-info-top
+        font-size 30px
+        margin-top 80px
+        >span
+          font-weight bold
+          color #333
+        .footer-info-red
+          color #FB474F
+      >p
+        font-size 22px
+        margin-top 15px
+        color #3D3838
+      .footer-info-bottom
+        margin-top 20px
+        width 27%
+        display flex
+        justify-content space-between
+        >div
+          display flex
+          width 30%
+          justify-content space-around
+          align-items center
+          >span
+            font-size 18px
+    .footer-city
+      margin-top 50px
+      width 100%
+      display flex
+      .hot-city
+        width 10%
+        >p
+          margin-left 30px
+          margin-top 10px
+          font-size 19px
+          font-weight bold
+      .city-list
+        width 1100px
+        >a
+          display block
+          width 100px
+          text-align center
+          height 40px
+          line-height 40px
+          float right
+  #footer-bottom
+    width 100%
+    background-color #F8F8F8
+    >p
+      width 100%
+      height 30px
+      line-height 30px
+      color #999
+      font-size 14px
+      margin-left 20px
+//服务商
+#service-content
+  width 100%
+  margin 0 auto
+  background-color #FBF8F8
+  >h2
+    margin 0 74.5px
+    height 85px
+    line-height 85px
+    font-size 18px
+    font-weight bold
+    color #333333
+  .service-container
+    margin 0 74.5px
+    display flex
+    .service-container-left
+      width 80%
+      background-color #FBF8F8
+      display flex
+      flex-wrap wrap
+      .service-card-item
+        width 230px
+        height 298px
+        border 1px solid #c0c4d0
+        background-color white
+        margin-right 10px
+        margin-bottom 10px
+        .card-link
+          display block
+          width 100%
+          height 100%
+          &:hover
+            box-shadow 4px 8px 10px #888
+          >img
+            width 210px
+            margin-top 10px
+            margin-left 10px
+          .card-text
+            display flex
+            padding 0 10px
+            margin-top 15px
+            height 26px
+            align-items center
+            >img
+              margin-right 10px
+            >h3
+              color #333333
+              font-size 16px
+              font-weight 600
+          .card-bottom
+            display flex
+            justify-content space-between
+            padding 0 10px
+            margin-top 15px
+            >span
+              font-size 12px
+    .service-container-right
+      width 20%
+      position relative
+      >img
+        display block
+        margin-bottom 10px
+      .img-center
+        position absolute
+        top 326px
+        right 26px
+        width 200px
+  .service-more
+    width 80%
+    height 200px
+    >span
+      display block
+      text-align center
+      height 50px
+      line-height 50px
+      width 200px
+      margin 75px auto 75px
+      color #7e8c8d
+      border 1px solid #d1d1d1
+      border-radius 10p
+//评论详情页
+#detail-content
+  width 100%
+  background-color #f8f8f8
+  padding-top 10px
+  .detail-top
+    width 100%
+    background-color white
+    padding-top 20px
+    margin 0 auto
+    display flex
+    height 120px
+    align-items center
+    justify-content space-around
+    .detail-top-left
+      width 45%
+      display flex
+      align-items flex-end
+      >h2
+        color black
+        font-weight bold
+        font-size 34px
+    .detail-top-right
+      width 25%
+      display flex
+      justify-content space-around
+      align-items center
+  .detail-nav
+    width 100%
+    background-color #333
+    height 40px
+    display flex
+    padding-left 60px
+    >a
+      display block
+      height 100%
+      text-align center
+      width 150px
+      line-height 40px
+      color white
+      font-size 14px
