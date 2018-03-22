@@ -5,6 +5,8 @@
   <title>详情页</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/jquery.pagination.css">
+
 </head>
 <body>
   <div id="wrap">
@@ -58,11 +60,31 @@
         <a href="">用户评论</a>
       </div>
       <div class="detail-container">
-        <div class="detail-container-left"></div>
+        <div class="detail-container-left">
+          <div class="detail-left-top">
+            <h3>服务项目</h3>
+            <div></div>
+          </div>
+          <div class="detail-left-center">
+            <h3>商家简介</h3>
+            <div></div>
+          </div>
+          <div class="detail-left-bottom">
+            <h3>用户评论</h3>
+            <div>
+              <div class="box">
+                <div id="pagination2" class="page fl"></div>
+                <div class="info fl">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="detail-container-right">
           <img src="./img/fuwushang2_07.jpg" alt="">
           <img src="./img/fuwushang2_10.jpg" alt="">
-          <img src="./img/daowayApp.png" alt="">
+          <img class="pic-one" src="./img/down.png" alt="">
+          <img class="pic-two" src="./img/daowayApp.png" alt="">
         </div>
       </div>
     </div>
@@ -130,4 +152,22 @@
     </div>
   </div>
 </body>
+<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/jquery.pagination.min.js"></script>
+<script>
+  $(function () {
+    $("#pagination2").pagination({
+      currentPage: 1,// 当前页数
+      totalPage: 9,// 总页数
+      isShow: false,// 是否显示首尾页
+      count: 9,// 显示个数
+      prevPageText: "<上一页",// 上一页文本
+      nextPageText: "下一页>",// 下一页文本
+      callback: function(current) {
+        // 回调,current(当前页数)
+      }
+    });
+  })
+</script>
 </html>

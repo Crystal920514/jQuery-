@@ -178,12 +178,11 @@
 }
 #wrap #content .content-container .content-item .content-container-title {
   display: flex;
-  width: 600px;
-  justify-content: space-around;
 }
 #wrap #content .content-container .content-item .content-container-title >a {
   display: block;
-  font-size: 24px;
+  margin-right: 10px;
+  font-size: 22px;
   color: #333;
 }
 #wrap #content .content-container .content-item .more {
@@ -470,6 +469,7 @@
   height: 40px;
   display: flex;
   padding-left: 60px;
+  margin-bottom: 20px;
 }
 #detail-content .detail-nav >a {
   display: block;
@@ -479,4 +479,100 @@
   line-height: 40px;
   color: #fff;
   font-size: 14px;
+}
+#detail-content .detail-container {
+  display: flex;
+  width: 90%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+#detail-content .detail-container .detail-container-left {
+  width: 80%;
+  background-color: #f8f8f8;
+}
+#detail-content .detail-container .detail-container-left .detail-left-top {
+  width: 100%;
+  padding-left: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+#detail-content .detail-container .detail-container-left .detail-left-top >h3 {
+  font-size: 16px;
+  height: 60px;
+  line-height: 60px;
+  width: 70px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 3px solid #f00;
+}
+#detail-content .detail-container .detail-container-left .detail-left-top >div {
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #c8c8c8;
+}
+#detail-content .detail-container .detail-container-left .detail-left-center {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+#detail-content .detail-container .detail-container-left .detail-left-center >h3 {
+  font-size: 16px;
+  height: 60px;
+  line-height: 60px;
+  width: 70px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 3px solid #f00;
+}
+#detail-content .detail-container .detail-container-left .detail-left-center >div {
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #c8c8c8;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom >h3 {
+  font-size: 16px;
+  height: 60px;
+  line-height: 60px;
+  width: 70px;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 3px solid #f00;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom >div {
+  width: 100%;
+  height: 300px;
+  border-top: 1px solid #c8c8c8;
+}
+#detail-content .detail-container .detail-container-right {
+  width: 20%;
+  position: relative;
+}
+#detail-content .detail-container .detail-container-right >img {
+  display: block;
+}
+#detail-content .detail-container .detail-container-right .pic-one {
+  position: absolute;
+  top: 50px;
+  right: 72px;
+}
+#detail-content .detail-container .detail-container-right .pic-two {
+  position: absolute;
+  width: 200px;
+  top: 310px;
+  right: 30px;
 }
