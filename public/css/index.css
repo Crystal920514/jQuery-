@@ -333,7 +333,8 @@
   line-height: 30px;
   color: #999;
   font-size: 14px;
-  margin-left: 20px;
+  padding--left: 20px;
+  box-sizing: border-box;
 }
 #service-content {
   width: 100%;
@@ -470,6 +471,7 @@
   display: flex;
   padding-left: 60px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
 #detail-content .detail-nav >a {
   display: block;
@@ -509,8 +511,23 @@
 }
 #detail-content .detail-container .detail-container-left .detail-left-top >div {
   width: 100%;
-  height: 300px;
+  height: 200px;
   border-top: 1px solid #c8c8c8;
+  display: flex;
+  align-items: center;
+}
+#detail-content .detail-container .detail-container-left .detail-left-top >div >img {
+  width: 150px;
+}
+#detail-content .detail-container .detail-container-left .detail-left-top >div >div {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  margin-left: 20px;
+  justify-content: space-around;
+}
+#detail-content .detail-container .detail-container-left .detail-left-top >div >div >div {
+  display: flex;
 }
 #detail-content .detail-container .detail-container-left .detail-left-center {
   width: 100%;
@@ -519,6 +536,7 @@
   margin: 0 auto;
   background-color: #fff;
   margin-bottom: 20px;
+  margin-top: 80px;
   box-sizing: border-box;
 }
 #detail-content .detail-container .detail-container-left .detail-left-center >h3 {
@@ -532,8 +550,22 @@
 }
 #detail-content .detail-container .detail-container-left .detail-left-center >div {
   width: 100%;
-  height: 300px;
   border-top: 1px solid #c8c8c8;
+}
+#detail-content .detail-container .detail-container-left .detail-left-center >div .detail-d1 {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+#detail-content .detail-container .detail-container-left .detail-left-center >div .detail-d1 >h3 {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #333;
+}
+#detail-content .detail-container .detail-container-left .detail-left-center >div >p {
+  line-height: 28px;
+  font-size: 16px;
+  color: #222;
 }
 #detail-content .detail-container .detail-container-left .detail-left-bottom {
   width: 100%;
@@ -541,6 +573,7 @@
   padding-right: 20px;
   margin: 0 auto;
   margin-bottom: 20px;
+  margin-top: 10px;
   background-color: #fff;
   box-sizing: border-box;
 }
@@ -555,8 +588,57 @@
 }
 #detail-content .detail-container .detail-container-left .detail-left-bottom >div {
   width: 100%;
-  height: 300px;
   border-top: 1px solid #c8c8c8;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list {
+  height: 140px;
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #c8c8c8;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list >img {
+  display: block;
+  margin-right: 20px;
+  width: 40px;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list .detail-com-item {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  justify-content: space-around;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list .detail-com-item .detail-name {
+  font-size: 14px;
+  color: #222;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list .detail-com-item .detail-date {
+  display: flex;
+  margin-bottom: -10px;
+  align-items: center;
+  height: 15px;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list .detail-com-item .detail-date >div >img {
+  width: 10px;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list .detail-com-item .detail-date >p {
+  margin-left: 10px;
+  font-size: 14px;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list .detail-com-item .detail-com-info {
+  font-size: 16px;
+  color: #000;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-comments .detail-comments-list .detail-com-item .detail-address {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #4c4747;
+}
+#detail-content .detail-container .detail-container-left .detail-left-bottom .detail-box .box {
+  margin: 0 auto;
+  width: 600px;
+  margin-top: 50px;
 }
 #detail-content .detail-container .detail-container-right {
   width: 20%;

@@ -255,7 +255,8 @@
       line-height 30px
       color #999
       font-size 14px
-      margin-left 20px
+      padding--left 20px
+      box-sizing border-box
 //服务商
 #service-content
   width 100%
@@ -370,6 +371,7 @@
     display flex
     padding-left 60px
     margin-bottom 20px
+    box-sizing border-box
     >a
       display block
       height 100%
@@ -404,8 +406,20 @@
           border-bottom 3px solid red
         >div
           width 100%
-          height 300px
+          height 200px
           border-top 1px solid #c8c8c8
+          display flex
+          align-items center
+          >img
+            width 150px
+          >div
+            display flex
+            flex-direction column
+            height 150px
+            margin-left 20px
+            justify-content space-around
+            >div
+              display flex
       .detail-left-center
         width 100%
         padding-left 20px
@@ -413,6 +427,7 @@
         margin 0 auto
         background-color white
         margin-bottom 20px
+        margin-top 80px
         box-sizing border-box
         >h3
           font-size 16px
@@ -424,14 +439,26 @@
           border-bottom 3px solid red
         >div
           width 100%
-          height 300px
           border-top 1px solid #c8c8c8
+          .detail-d1
+            height 60px
+            display flex
+            align-items center
+            >h3
+              font-size 18px
+              margin-right 10px
+              color #333333
+          >p
+            line-height: 28px;
+            font-size: 16px;
+            color #222222
       .detail-left-bottom
         width 100%
         padding-left 20px
         padding-right 20px
         margin 0 auto
         margin-bottom 20px
+        margin-top 10px
         background-color white
         box-sizing border-box
         >h3
@@ -444,8 +471,50 @@
           border-bottom 3px solid red
         >div
           width 100%
-          height 300px
           border-top 1px solid #c8c8c8
+        .detail-comments
+          .detail-comments-list
+            height 140px
+            padding-top 20px
+            display flex
+            align-items flex-start
+            border-bottom  1px solid #c8c8c8
+            >img
+              display block
+              margin-right 20px
+              width 40px
+            .detail-com-item
+              display flex
+              flex-direction column
+              height 90%
+              justify-content space-around
+              .detail-name
+                font-size 14px
+                color #222222
+              .detail-date
+                display flex
+                margin-bottom -10px
+                align-items center
+                height 15px
+                >div
+                  >img
+                    width 10px
+                >p
+                  margin-left 10px
+                  font-size 14px
+              .detail-com-info
+                font-size 16px
+                color black
+              .detail-address
+                display flex
+                align-items center
+                font-size 14px
+                color #4c4747
+        .detail-box
+          .box
+            margin 0 auto
+            width 600px
+            margin-top 50px
     .detail-container-right
       width 20%
       position relative

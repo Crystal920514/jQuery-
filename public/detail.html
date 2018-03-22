@@ -63,19 +63,39 @@
         <div class="detail-container-left">
           <div class="detail-left-top">
             <h3>服务项目</h3>
-            <div></div>
+            <div>
+                <img src="./img/50209e47-14f4-4044-a87a-ac5285501dbc_thumb.jpg" alt="">
+              <div>
+                <h3>家庭保洁</h3>
+                <p>服务内容：
+                  家庭保洁服务，2小时起订。服务时间未使用完不做退...</p>
+                <div>
+                  <p>35</p>
+                  <p>元/小时</p>
+                  <span>原价45</span>
+                  <span>已售3290</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="detail-left-center">
             <h3>商家简介</h3>
-            <div></div>
+            <div class="detail-c1">
+              <div class="detail-d1">
+                <h3 class="">上海家谐网络科技有限公司</h3>
+                <img src="./img/renzheng.jpg" alt="">
+              </div>
+              <p>云家政是家政服务在线预订平台。我们的目标是让每个家庭都能获得诚信、便捷、有保障的家政服务。云家政拥有国内最大的实名认证家庭服务员数据库，目前平台上有超过100000名专业服务人员；数百个家政服务商，遍布全国主要城市各个社区。 云家政倡导简单、轻松的生活方式。通过把分散的家政服务能力汇集和分配，让中国家庭获得诚信、便捷、有保障的家政服务，解决日常生活中的麻烦事，把更多时间留给自己和家人，提高生活品质。</p>
+            </div>
           </div>
           <div class="detail-left-bottom">
-            <h3>用户评论</h3>
-            <div>
+            <h3 id="userCom">用户评论</h3>
+            <div class="detail-comments">
+
+            </div>
+            <div class="detail-box">
               <div class="box">
                 <div id="pagination2" class="page fl"></div>
-                <div class="info fl">
-                </div>
               </div>
             </div>
           </div>
@@ -112,38 +132,38 @@
         </div>
         <div class="city-list">
           <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">哈尔滨</a>
+          <a href="javascript:;">上海</a>
+          <a href="javascript:;">广州</a>
+          <a href="javascript:;">深圳</a>
+          <a href="javascript:;">成都</a>
+          <a href="javascript:;">天津</a>
+          <a href="javascript:;">南京</a>
+          <a href="javascript:;">杭州</a>
+          <a href="javascript:;">重庆</a>
+          <a href="javascript:;">苏州</a>
+          <a href="javascript:;">武汉</a>
+          <a href="javascript:;">长沙</a>
+          <a href="javascript:;">济南</a>
+          <a href="javascript:;">郑州</a>
+          <a href="javascript:;">西安</a>
+          <a href="javascript:;">沈阳</a>
+          <a href="javascript:;">福州</a>
+          <a href="javascript:;">厦门</a>
+          <a href="javascript:;">南昌</a>
+          <a href="javascript:;">合肥</a>
+          <a href="javascript:;">宁波</a>
+          <a href="javascript:;">无锡</a>
+          <a href="javascript:;">青岛</a>
+          <a href="javascript:;">大连</a>
+          <a href="javascript:;">东莞</a>
+          <a href="javascript:;">佛山</a>
           <a href="javascript:;">石家庄</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
-          <a href="javascript:;">北京</a>
+          <a href="javascript:;">哈尔滨</a>
+          <a href="javascript:;">太原</a>
+          <a href="javascript:;">昆明</a>
+          <a href="javascript:;">贵阳</a>
+          <a href="javascript:;">南宁</a>
+          <a href="javascript:;">温州</a>
         </div>
       </div>
     </div>
@@ -155,6 +175,30 @@
 <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="./js/index.js"></script>
 <script type="text/javascript" src="./js/jquery.pagination.min.js"></script>
+<script type="text/javascript" src="./js/template-web.js"></script>
+<script id="temp3" type="text/html">
+  {{each data.comments}}
+  <div class="detail-comments-list">
+    <img src="{{$value.iconUrl}}" alt="">
+    <div class="detail-com-item">
+      <p class="detail-name">{{$value.nick}}</p>
+      <div class="detail-date">
+        <div>
+          {{each $value.starClass}}
+          <img src="./img/{{$value}}" alt="">
+          {{/each}}
+        </div>
+        <p>{{$value.formatTime}}</p>
+      </div>
+      <p class="detail-com-info">{{$value.comment}}</p>
+      <div class="detail-address">
+        <img src="./img/position.jpg" alt="">&nbsp;
+        <p> {{$value.city}}  {{$value.area}}</p>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</script>
 <script>
   $(function () {
     $("#pagination2").pagination({
@@ -165,9 +209,52 @@
       prevPageText: "<上一页",// 上一页文本
       nextPageText: "下一页>",// 下一页文本
       callback: function(current) {
-        // 回调,current(当前页数)
+        $.get('/getComments?page='+current, function (data) {
+          setStar(data)
+          formatDate(data)
+          $('.detail-comments').html(template('temp3', {data:data}))
+          console.log(data);
+        })
       }
+
     });
+    $.get('/getComments?page='+1, function (data) {
+      setStar(data)
+      formatDate(data)
+      $('.detail-comments').append(template('temp3', {data:data}))
+      console.log(data);
+    });
+    function setStar(data) {
+      for(var i=0; i<data.comments.length; i++){
+        const count = data.comments[i].star
+        const starArr = getStar(count)
+        data.comments[i].starClass = starArr
+      }
+    }
+    function getStar(count) {
+      var starArr = []
+      for(var i=0; i<count; i++){
+        starArr.push('red_star.png')
+      }
+      while(starArr.length<5){
+        starArr.push('gray_star.png')
+      }
+      return starArr
+    }
+    function formatDate(data) {
+      for(var i=0; i<data.comments.length; i++){
+        const time = data.comments[i].createtime
+        const formatTime = timestampToTime(time)
+        data.comments[i].formatTime = formatTime
+      }
+    };
+    function timestampToTime(timestamp) {
+      var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+      Y = date.getFullYear() + '-';
+      M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+      D = date.getDate() + ' ';
+      return Y+M+D;
+    }
   })
 </script>
 </html>
