@@ -227,20 +227,17 @@
     function setStar(data) {
       for(var i=0; i<data.comments.length; i++){
         const count = data.comments[i].star
-        const starArr = getStar(count)
+        var starArr = []
+        for(var j=0; j<count; j++){
+          starArr.push('red_star.png')
+        }
+        while(starArr.length<5){
+          starArr.push('gray_star.png')
+        }
         data.comments[i].starClass = starArr
       }
     }
-    function getStar(count) {
-      var starArr = []
-      for(var i=0; i<count; i++){
-        starArr.push('red_star.png')
-      }
-      while(starArr.length<5){
-        starArr.push('gray_star.png')
-      }
-      return starArr
-    }
+
     function formatDate(data) {
       for(var i=0; i<data.comments.length; i++){
         const time = data.comments[i].createtime
